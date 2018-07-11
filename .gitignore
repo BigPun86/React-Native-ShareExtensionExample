@@ -37,7 +37,7 @@ android/app/src/main/res/values/com_crashlytics_export_strings.xml
 
 # node.js
 #
-node_modules/
+# node_modules/
 npm-debug.log
 yarn-error.log
 
