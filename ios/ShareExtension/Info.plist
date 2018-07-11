@@ -7,7 +7,7 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>shareExtensionApp</string>
+				<string>shareScheme</string>
 			</array>
 		</dict>
 	</array>

@@ -28,8 +28,8 @@ export default class App extends Component<Props> {
 
   handleOpenURL = async event => {
     const url = event.url;
-    const imageUrl = url.replace("shareExtensionApp://shareImage/", "");
-    this.setState({ imageUrl: value });
+    const imageUrl = url.replace("shareScheme://?imageUrl=", "");
+    this.setState({ imageUrl });
   };
 
   render() {

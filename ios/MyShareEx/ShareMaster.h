@@ -10,7 +10,7 @@
 
 // Need config this two value bellows:
 
-static NSString *const KApp_Scheme = @"main://";
+static NSString *const KApp_Scheme = @"shareScheme://";
 
 static NSString *const  KApp_Group_ID = @"group.share.extension";
 
