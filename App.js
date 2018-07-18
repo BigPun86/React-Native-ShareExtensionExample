@@ -16,8 +16,8 @@ const instructions = Platform.select({
 
 type Props = {};
 export default class App extends Component<Props> {
-  state = { imageUrl: null };
-
+  state_old = { imageUrl: null };
+  state ={ imageUrls: [] }
   componentDidMount() {
     Linking.addEventListener("url", this.handleOpenURL);
   }
@@ -28,17 +28,36 @@ export default class App extends Component<Props> {
 
   handleOpenURL = async event => {
     const url = event.url;
-    const imageUrl = url.replace("shareScheme://?imageUrl=", "");
-    this.setState({ imageUrl });
+    const imageUrl = url.replace("shareScheme://?imageUrls=", "");
+    var imgeUrls = imageUrl.split(";");
+    //this.setState({ imageUrl });
+    this.state.imageUrls = [];
+    imgeUrls.forEach(url => {
+      this.state.imageUrls.push(url);
+    });
+    this.setState({ imageUrls: this.state.imageUrls })
   };
 
   render() {
+    var pickedImages = ""
+    pickedImages = this.state.imageUrls.map((r, i) => {
+      return <Image key={ i } style={styles.pickedImage}
+                  source={{ uri: this.state.imageUrls[i] }}
+              />
+    })
+    var textUrls = ""
+    if (0>1){
+      // only for debug 
+      textUrls = this.state.imageUrls.map((r, i) => {
+        return <Text  key={ i } style={styles.welcome}>  { r }</Text>
+     })
+    }
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>Welcome to React Native!</Text>
         <Text style={styles.instructions}>To get started, edit App.js</Text>
         <Text style={styles.instructions}>{instructions}</Text>
-        {this.state.imageUrl && (
+        {this.state_old.imageUrl && (
           <Image
             style={{
               borderWidth: 1,
@@ -49,6 +68,9 @@ export default class App extends Component<Props> {
             source={{ uri: this.state.imageUrl }}
           />
         )}
+         { pickedImages } 
+         { textUrls } 
+         
       </View>
     );
   }
@@ -70,5 +92,11 @@ const styles = StyleSheet.create({
     textAlign: "center",
     color: "#333333",
     marginBottom: 5
+  },
+  pickedImage:{
+    borderWidth: 1,
+    borderColor: "red",
+    width: 100,
+    height: 100
   }
 });

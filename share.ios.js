@@ -9,7 +9,7 @@ import ShareExtension from "react-native-share-extension";
 
 import { Text, View, TouchableOpacity } from "react-native";
 
-const groupID = "group.share.extension";
+const groupID = "group.memomeister";
 
 export default class Share extends Component {
   constructor(props, context) {

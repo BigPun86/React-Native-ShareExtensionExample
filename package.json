@@ -9,8 +9,8 @@
   "dependencies": {
     "react": "16.3.1",
     "react-native": "0.55.2",
-    "react-native-modalbox": "^1.4.2",
-    "react-native-share-extension": "git+https://github.com/BigPun86/react-native-share-extension.git"
+    "react-native-modalbox": "1.4.2",
+    "react-native-share-extension": "https://github.com/BigPun86/react-native-share-extension.git"
   },
   "devDependencies": {
     "babel-jest": "22.4.3",

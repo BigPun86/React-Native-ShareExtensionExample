@@ -12,7 +12,7 @@
 
 static NSString *const KApp_Scheme = @"shareScheme://";
 
-static NSString *const  KApp_Group_ID = @"group.share.extension";
+static NSString *const  KApp_Group_ID = @"group.memomeister";
 
 @interface ShareMaster : NSObject
 
