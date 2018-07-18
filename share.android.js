@@ -5,7 +5,7 @@
 
 import React, { Component } from "react";
 import Modal from "react-native-modalbox";
-import ShareExtension from "react-native-share-extension";
+import ShareExtension from "@freiraum/react-native-share-extension";
 
 import { Text, View, TouchableOpacity } from "react-native";
 

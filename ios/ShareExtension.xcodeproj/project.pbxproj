@@ -22,6 +22,8 @@
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
+		F518CA9B20FFD85100BE2D3F /* libReactNativeShareExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F518CA9A20FFD84100BE2D3F /* libReactNativeShareExtension.a */; };
+		F518CA9C20FFD85900BE2D3F /* libReactNativeShareExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F518CA9A20FFD84100BE2D3F /* libReactNativeShareExtension.a */; };
 		F5265CD1207F704400596A86 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5265CCF207F704400596A86 /* MainInterface.storyboard */; };
 		F5265CD5207F704400596A86 /* MyShareEx.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F5265CCA207F704400596A86 /* MyShareEx.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F5265CDB207F707700596A86 /* MyShareEx.m in Sources */ = {isa = PBXBuildFile; fileRef = F5265CDA207F707700596A86 /* MyShareEx.m */; };
@@ -37,8 +39,6 @@
 		F5265CE5207F716300596A86 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
 		F5265CE6207F716300596A86 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
 		F5265CE7207F716300596A86 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
-		F55F4B97207F7BC700789975 /* libReactNativeShareExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F55F4B96207F7BBC00789975 /* libReactNativeShareExtension.a */; };
-		F55F4B98207F7BD100789975 /* libReactNativeShareExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F55F4B96207F7BBC00789975 /* libReactNativeShareExtension.a */; };
 		F55F4B99207F7C4F00789975 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		F5B9CC7A20F55B8500123E6D /* NSURL+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F5B9CC5220F55B8500123E6D /* NSURL+Extension.m */; };
 		F5B9CC7D20F55B9B00123E6D /* ShareMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = F5B9CC7C20F55B9B00123E6D /* ShareMaster.m */; };
@@ -304,19 +304,19 @@
 			remoteGlobalIDString = 358F4ED71D1E81A9004DF814;
 			remoteInfo = RCTBlob;
 		};
+		F518CA9920FFD84100BE2D3F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F518CA9520FFD84100BE2D3F /* ReactNativeShareExtension.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 41B5DE301D0B505800949BD5;
+			remoteInfo = ReactNativeShareExtension;
+		};
 		F5265CD3207F704400596A86 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = F5265CC9207F704400596A86;
 			remoteInfo = MyShareEx;
-		};
-		F55F4B95207F7BBC00789975 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F55F4B91207F7BBC00789975 /* ReactNativeShareExtension.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 41B5DE301D0B505800949BD5;
-			remoteInfo = ReactNativeShareExtension;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -358,12 +358,12 @@
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
+		F518CA9520FFD84100BE2D3F /* ReactNativeShareExtension.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeShareExtension.xcodeproj; path = "../node_modules/@freiraum/react-native-share-extension/ios/ReactNativeShareExtension.xcodeproj"; sourceTree = "<group>"; };
 		F5265CCA207F704400596A86 /* MyShareEx.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyShareEx.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5265CD0207F704400596A86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		F5265CD2207F704400596A86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5265CDA207F707700596A86 /* MyShareEx.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyShareEx.m; sourceTree = "<group>"; };
 		F5265CEB207F740F00596A86 /* MyShareEx.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyShareEx.entitlements; sourceTree = "<group>"; };
-		F55F4B91207F7BBC00789975 /* ReactNativeShareExtension.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeShareExtension.xcodeproj; path = "../node_modules/react-native-share-extension/ios/ReactNativeShareExtension.xcodeproj"; sourceTree = "<group>"; };
 		F55F4BB7207F98A400789975 /* ShareExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = ShareExtension.entitlements; path = ShareExtension/ShareExtension.entitlements; sourceTree = "<group>"; };
 		F5B9CC5220F55B8500123E6D /* NSURL+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURL+Extension.m"; path = "ShareExtension/NSURL+Extension.m"; sourceTree = "<group>"; };
 		F5B9CC7920F55B8500123E6D /* NSURL+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSURL+Extension.h"; path = "ShareExtension/NSURL+Extension.h"; sourceTree = "<group>"; };
@@ -376,8 +376,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F518CA9B20FFD85100BE2D3F /* libReactNativeShareExtension.a in Frameworks */,
 				F55F4B99207F7C4F00789975 /* libRCTAnimation.a in Frameworks */,
-				F55F4B98207F7BD100789975 /* libReactNativeShareExtension.a in Frameworks */,
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
@@ -396,7 +396,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F55F4B97207F7BC700789975 /* libReactNativeShareExtension.a in Frameworks */,
+				F518CA9C20FFD85900BE2D3F /* libReactNativeShareExtension.a in Frameworks */,
 				F5265CDC207F716300596A86 /* libRCTActionSheet.a in Frameworks */,
 				F5265CDD207F716300596A86 /* libRCTAnimation.a in Frameworks */,
 				F5265CDE207F716300596A86 /* libRCTBlob.a in Frameworks */,
@@ -563,7 +563,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				F55F4B91207F7BBC00789975 /* ReactNativeShareExtension.xcodeproj */,
+				F518CA9520FFD84100BE2D3F /* ReactNativeShareExtension.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
@@ -623,6 +623,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		F518CA9620FFD84100BE2D3F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F518CA9A20FFD84100BE2D3F /* libReactNativeShareExtension.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		F5265C9B207F6FF000596A86 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
@@ -641,14 +649,6 @@
 				F5265CDA207F707700596A86 /* MyShareEx.m */,
 			);
 			path = MyShareEx;
-			sourceTree = "<group>";
-		};
-		F55F4B92207F7BBC00789975 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F55F4B96207F7BBC00789975 /* libReactNativeShareExtension.a */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -786,8 +786,8 @@
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 				},
 				{
-					ProductGroup = F55F4B92207F7BBC00789975 /* Products */;
-					ProjectRef = F55F4B91207F7BBC00789975 /* ReactNativeShareExtension.xcodeproj */;
+					ProductGroup = F518CA9620FFD84100BE2D3F /* Products */;
+					ProjectRef = F518CA9520FFD84100BE2D3F /* ReactNativeShareExtension.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -1058,11 +1058,11 @@
 			remoteRef = ADBDB9261DFEBF0700ED6528 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		F55F4B96207F7BBC00789975 /* libReactNativeShareExtension.a */ = {
+		F518CA9A20FFD84100BE2D3F /* libReactNativeShareExtension.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libReactNativeShareExtension.a;
-			remoteRef = F55F4B95207F7BBC00789975 /* PBXContainerItemProxy */;
+			remoteRef = F518CA9920FFD84100BE2D3F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -1180,7 +1180,7 @@
 				DEVELOPMENT_TEAM = QE22L74JCD;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-share-extension/ios",
+					"$(SRCROOT)/../node_modules/@freiraum/react-native-share-extension/ios/**",
 				);
 				INFOPLIST_FILE = ShareExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
@@ -1208,7 +1208,7 @@
 				DEVELOPMENT_TEAM = QE22L74JCD;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-share-extension/ios",
+					"$(SRCROOT)/../node_modules/@freiraum/react-native-share-extension/ios/**",
 				);
 				INFOPLIST_FILE = ShareExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
@@ -1331,7 +1331,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native/React/**",
-					"$(SRCROOT)/../node_modules/react-native-share-extension/ios/**",
+					"$(SRCROOT)/../node_modules/@freiraum/react-native-share-extension/ios/**",
 				);
 				INFOPLIST_FILE = MyShareEx/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
@@ -1378,7 +1378,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native/React/**",
-					"$(SRCROOT)/../node_modules/react-native-share-extension/ios/**",
+					"$(SRCROOT)/../node_modules/@freiraum/react-native-share-extension/ios/**",
 				);
 				INFOPLIST_FILE = MyShareEx/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
