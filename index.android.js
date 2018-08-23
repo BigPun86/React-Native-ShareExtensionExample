@@ -4,5 +4,5 @@ import { AppRegistry } from "react-native";
 AppRegistry.registerComponent("ShareExtension", () => require("./App").default);
 AppRegistry.registerComponent(
   "MyShareEx",
-  () => require("./share.ios").default
+  () => require("./share.android").default
 );

@@ -421,9 +421,9 @@
     lodash "^4.2.0"
     to-fast-properties "^2.0.0"
 
-"@freiraum/react-native-share-extension@1.4.0":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@freiraum/react-native-share-extension/-/react-native-share-extension-1.4.0.tgz#80f51e5de27739625445105454dcad6c62094123"
+"@freiraum/react-native-share-extension@1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@freiraum/react-native-share-extension/-/react-native-share-extension-1.6.0.tgz#fa4018b81d82c705b69336a3afc16e3bc0bc434f"
 
 abab@^1.0.4:
   version "1.0.4"

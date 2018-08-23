@@ -7,7 +7,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@freiraum/react-native-share-extension": "1.4.0",
+    "@freiraum/react-native-share-extension": "1.6.0",
     "react-native-modalbox": "1.4.2",
     "react-native": "0.55.2",
     "react": "16.3.1"

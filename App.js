@@ -14,10 +14,15 @@ const instructions = Platform.select({
     "Shake or press menu button for dev menu"
 });
 
+function getFileExtension(filename) {
+  var ext = /^.+\.([^.]+)$/.exec(filename);
+  return ext == null ? "" : ext[1];
+}
+
 type Props = {};
 export default class App extends Component<Props> {
-  state_old = { imageUrl: null };
-  state ={ imageUrls: [] }
+  state = { fileUrls: [] };
+
   componentDidMount() {
     Linking.addEventListener("url", this.handleOpenURL);
   }
@@ -27,50 +32,48 @@ export default class App extends Component<Props> {
   }
 
   handleOpenURL = async event => {
+    this.error = null;
+    this.fileUrls = [];
+
     const url = event.url;
-    const imageUrl = url.replace("shareScheme://?imageUrls=", "");
-    var imgeUrls = imageUrl.split(";");
-    //this.setState({ imageUrl });
-    this.state.imageUrls = [];
-    imgeUrls.forEach(url => {
-      this.state.imageUrls.push(url);
+    const replaceStatement = "shareScheme://?imageUrls="; // TODO: Change imageUrls into fileUrls or dataUrls
+    const unresolvedImages = url.replace(replaceStatement, "");
+    const data = unresolvedImages.split(";");
+
+    data.forEach(fileURL => {
+      if (!fileURL || fileURL === "file://null") {
+        this.error = true;
+      } else {
+        const extension = getFileExtension(fileURL);
+        this.fileUrls.push({ path: fileURL, type: extension });
+      }
     });
-    this.setState({ imageUrls: this.state.imageUrls })
+
+    if (!this.error) this.setState({ fileUrls: this.fileUrls });
   };
 
   render() {
-    var pickedImages = ""
-    pickedImages = this.state.imageUrls.map((r, i) => {
-      return <Image key={ i } style={styles.pickedImage}
-                  source={{ uri: this.state.imageUrls[i] }}
-              />
-    })
-    var textUrls = ""
-    if (0>1){
-      // only for debug 
-      textUrls = this.state.imageUrls.map((r, i) => {
-        return <Text  key={ i } style={styles.welcome}>  { r }</Text>
-     })
-    }
+    let pickedImages = "";
+    pickedImages = this.state.fileUrls.map((r, i) => {
+      return (
+        <Image
+          key={i}
+          style={styles.pickedImage}
+          source={{ uri: this.state.fileUrls[i].path }}
+        />
+      );
+    });
+
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
+        <Text style={styles.welcome}>
+          Welcome to React Native Share Extension!
+        </Text>
+        <Text style={styles.instructions}>
+          Choose atleast one image from Gallery and Share it with MyShareEx App
+        </Text>
         <Text style={styles.instructions}>{instructions}</Text>
-        {this.state_old.imageUrl && (
-          <Image
-            style={{
-              borderWidth: 1,
-              borderColor: "red",
-              width: 100,
-              height: 100
-            }}
-            source={{ uri: this.state.imageUrl }}
-          />
-        )}
-         { pickedImages } 
-         { textUrls } 
-         
+        {pickedImages}
       </View>
     );
   }
@@ -79,6 +82,7 @@ export default class App extends Component<Props> {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    padding: 30,
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#F5FCFF"
@@ -93,7 +97,7 @@ const styles = StyleSheet.create({
     color: "#333333",
     marginBottom: 5
   },
-  pickedImage:{
+  pickedImage: {
     borderWidth: 1,
     borderColor: "red",
     width: 100,
